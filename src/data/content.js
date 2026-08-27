@@ -1,5 +1,5 @@
 import { Compass, ChartNoAxesCombined, TrendingUp, Landmark, Search, Users, ShieldCheck, Lightbulb, Focus, Scale } from 'lucide-react';
-export const nav=[['Home','/'],['About','/about'],['Services','/services'],['Insights','/insights'],['Contact','/contact']];
+export const nav=[['Home','/'],['About','/about'],['Services','/services'],['Insights','/insights'],['Payments','/payments'],['Contact','/contact']];
 export const services=[
  {title:'Strategic Advisory',icon:Compass,desc:'Evaluate priorities, opportunities, positioning and the choices that shape long-term direction.'},
  {title:'Business & Financial Advisory',icon:ChartNoAxesCombined,desc:'Bring structure to planning, business evaluation and financially informed decision-making.'},
