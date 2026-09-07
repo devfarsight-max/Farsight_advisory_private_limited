@@ -1,3 +1,23 @@
-import {useState} from 'react';import {Check,Mail,Phone,MapPin} from 'lucide-react';import {Container,PageHero,Reveal,SectionHeading} from '../components/UI';import {services} from '../data/content';
-export default function Contact(){const [errors,setErrors]=useState({}),[sent,setSent]=useState(false);const submit=e=>{e.preventDefault();const d=new FormData(e.currentTarget),er={};['name','email','message'].forEach(k=>{if(!d.get(k)?.trim())er[k]='This field is required.'});if(d.get('email')&&!/^\S+@\S+\.\S+$/.test(d.get('email')))er.email='Enter a valid email address.';setErrors(er);if(!Object.keys(er).length){setSent(true);e.currentTarget.reset()}};return <><PageHero eyebrow="Contact" title="Let’s look at what’s ahead." text="Tell us about the decision, opportunity or challenge you are working through."/><section className="section"><Container className="contact-grid"><Reveal><SectionHeading eyebrow="Start a conversation" title="A focused first discussion."/><p>Share a little context and we’ll use the first conversation to understand your priorities and whether Farsight is the right fit.</p><div className="contact-points"><div><Mail/><span><small>Email</small><a href="mailto:info@farsightadvisory.in">info@farsightadvisory.in</a></span></div><div><Phone/><span><small>Phone</small><a href="tel:+919650477703">9650477703</a></span></div><div><MapPin/><span><small>Office</small>VDS TOWER -04 C-23, OFFICE NO- 301 Anjuman House, Sector 63, Noida, Uttar Pradesh, 201309</span></div></div></Reveal><Reveal><form onSubmit={submit} noValidate>{sent&&<div className="success" role="status"><Check/> Thank you. This demo form has validated successfully; connect an email service to receive submissions.</div>}<div className="form-row"><Field name="name" label="Full Name *" error={errors.name}/><Field name="company" label="Company"/></div><div className="form-row"><Field name="email" type="email" label="Email *" error={errors.email}/><Field name="phone" type="tel" label="Phone"/></div><label>Service / Area of Interest<select name="service"><option value="">Select an area</option>{services.map(s=><option key={s.title}>{s.title}</option>)}</select></label><label>Message *<textarea name="message" rows="5" placeholder="What would you like to discuss?" aria-invalid={!!errors.message}/>{errors.message&&<small className="error">{errors.message}</small>}</label><button className="button primary" type="submit">Send inquiry</button></form></Reveal></Container></section><section className="section pale"><Container><SectionHeading eyebrow="What happens next" title="Simple, direct and useful from the outset."/><div className="process">{[['01','We review','We consider the context and the right expertise.'],['02','We connect','We arrange a focused introductory conversation.'],['03','We shape the path','If there is a fit, we propose a clear scope and next step.']].map(x=><div key={x[0]}><strong>{x[0]}</strong><h3>{x[1]}</h3><p>{x[2]}</p></div>)}</div></Container></section><section className="section"><Container><SectionHeading eyebrow="FAQ" title="Before we speak."/><div className="faq">{[['What kinds of organisations do you advise?','We shape engagements around the decision, not a fixed company profile. Our approach can support established businesses, growth-stage organisations and leadership teams.'],['How does an engagement begin?','With a focused conversation to understand the context, decision and desired outcome.'],['Do you provide regulated investment advice?','The services described here are strategic and business advisory. No regulated financial service is claimed on this website.']].map(x=><details key={x[0]}><summary>{x[0]}</summary><p>{x[1]}</p></details>)}</div></Container></section></>}
-function Field({name,label,type='text',error}){return <label>{label}<input name={name} type={type} aria-invalid={!!error}/>{error&&<small className="error">{error}</small>}</label>}
+import {Mail,Phone,MapPin} from 'lucide-react';
+import {Container,PageHero,Reveal,SectionHeading} from '../components/UI';
+
+export default function Contact(){
+  return <>
+    <PageHero eyebrow="Contact" title="Get in touch." text="Contact Farsight Advisory Private Limited by email or phone, or find our office details below."/>
+    <section className="section">
+      <Container className="contact-grid">
+        <div>
+          <SectionHeading eyebrow="Contact information" title="Farsight Advisory Private Limited"/>
+          <p>For enquiries about our services, engagements or payments, reach us using the details below.</p>
+        </div>
+        <Reveal className="contact-information">
+          <div className="contact-points">
+            <div><Mail aria-hidden="true"/><span><small>Email</small><a href="mailto:info@farsightadvisory.in">info@farsightadvisory.in</a></span></div>
+            <div><Phone aria-hidden="true"/><span><small>Phone</small><a href="tel:+919650477703">9650477703</a></span></div>
+            <div><MapPin aria-hidden="true"/><span><small>Office</small><address>VDS TOWER -04 C-23, OFFICE NO- 301 Anjuman House, Sector 63, Noida, Uttar Pradesh, 201309</address></span></div>
+          </div>
+        </Reveal>
+      </Container>
+    </section>
+  </>;
+}
