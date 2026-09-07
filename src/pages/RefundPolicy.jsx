@@ -113,6 +113,8 @@ export default function RefundPolicy(){
       <p>{"For any queries related to refunds or billing:"}</p>
       <p>{"Farsight Advisory Private Limited"}</p>
       <p>{"Email: "}<a href="mailto:info@farsightadvisory.in">info@farsightadvisory.in</a></p>
+      <p>Phone: <a href="tel:+919650477703">9650477703</a></p>
+      <p>Address: VDS TOWER -04 C-23, OFFICE NO- 301 Anjuman House, Sector 63, Noida, Uttar Pradesh, 201309</p>
       <p>{"Website: "}<a href="https://farsightadvisory.in">farsightadvisory.in</a></p>
       <h2>{"17. Policy Updates"}</h2>
       <p>{"The Company reserves the right to amend or update this Policy at any time without prior notice."}</p>

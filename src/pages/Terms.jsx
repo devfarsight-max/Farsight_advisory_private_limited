@@ -61,6 +61,8 @@ export default function Terms(){
 
       <h2>Contact Us</h2>
       <p>If you have any questions about these Terms & Conditions, contact us at <Email/>.</p>
+      <p>Phone: <a href="tel:+919650477703">9650477703</a></p>
+      <p>Address: VDS TOWER -04 C-23, OFFICE NO- 301 Anjuman House, Sector 63, Noida, Uttar Pradesh, 201309</p>
     </Container></section>
   </>;
 }

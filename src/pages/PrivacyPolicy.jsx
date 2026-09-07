@@ -15,7 +15,7 @@ export default function PrivacyPolicy(){
       </li><li>
       {"Affiliate means an entity that controls, is controlled by, or is under common control with a party, where \"control\" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority."}
       </li><li>
-      {"Company (referred to as either \"the Company\", \"We\", \"Us\" or \"Our\" in this Privacy Policy) refers to FARSIGHT ADVISORY PRIVATE LIMITED, 301, VDS TOWER 4, C-23 , SECTOR 63 -NOIDA-201301."}
+      {"Company (referred to as either \"the Company\", \"We\", \"Us\" or \"Our\" in this Privacy Policy) refers to FARSIGHT ADVISORY PRIVATE LIMITED, VDS TOWER -04 C-23, OFFICE NO- 301 Anjuman House, Sector 63, Noida, Uttar Pradesh, 201309."}
       </li><li>
       {"Cookies are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website, among its many uses."}
       </li><li>
